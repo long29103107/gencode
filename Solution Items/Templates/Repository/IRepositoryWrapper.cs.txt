@@ -1,0 +1,7 @@
+﻿using {{ModuleName}}.Repository.BaseWrapper.Interfaces;
+
+namespace {{ModuleName}}.Repository.Interfaces;
+public interface IRepositoryWrapper : IRepositoryWrapperBase
+{
+    I{{ModuleName}}Repository {{ModuleName}} { get; }
+}

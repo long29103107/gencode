@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "gencode": {
+      "commandName": "Project",
+      "commandLineArgs": "--file gencode.runtimeconfig.json"
+    }
+  }
+}

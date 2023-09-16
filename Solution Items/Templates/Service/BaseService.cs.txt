@@ -1,0 +1,15 @@
+﻿using {{ModuleName}}.Repository.Interfaces;
+using {{ModuleName}}.Service.Interfaces;
+
+namespace {{ModuleName}}.Service;
+public class BaseService : IBaseService
+{
+    protected readonly IRepositoryWrapper _wrapper;
+    //protected readonly IMapper _mapper;
+
+    public BaseService(IRepositoryWrapper wrapper)
+    {
+        _wrapper = wrapper;
+        //_mapper = mapper;
+    }
+}

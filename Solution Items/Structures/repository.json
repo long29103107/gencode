@@ -1,0 +1,17 @@
+[
+  //Repository
+  {
+    "Name": "{{ModuleName}}Repository.cs",
+    "Template": "ModelRepository.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "I{{ModuleName}}Repository.cs",
+    "Template": "IModelRepository.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\Interfaces\\",
+    "Resource": "Repository"
+  }
+]

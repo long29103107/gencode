@@ -1,0 +1,11 @@
+﻿using {{ModuleName}}.Service.DTO;
+
+namespace {{ModuleName}}.Service.Interfaces;
+public interface I{{ModuleName}}Service : IBaseService
+{
+    Task<List<{{ModuleName}}Reponse>> GetListAsync(List{{ModuleName}}Request request);
+    Task<{{ModuleName}}Reponse> GetDetailAsync(int id);
+    Task<{{ModuleName}}Reponse> CreateAsync({{ModuleName}}CreateRequest request);
+    Task<{{ModuleName}}Reponse> UpdateAsync(int id, {{ModuleName}}UpdateRequest request);
+    Task DeleteAsync(int id);
+}

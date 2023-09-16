@@ -1,0 +1,7 @@
+﻿using {{ModuleName}}.Repository.Interfaces;
+
+namespace {{ModuleName}}.Service.Interfaces;
+public interface IBaseService
+{
+
+}

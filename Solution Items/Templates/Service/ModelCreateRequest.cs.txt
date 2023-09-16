@@ -1,0 +1,6 @@
+﻿namespace {{ModuleName}}.Service.DTO;
+public sealed class {{ModuleName}}CreateRequest
+{
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}

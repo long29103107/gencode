@@ -1,0 +1,26 @@
+﻿using {{ModuleName}}.Repository.BaseWrapper;
+using {{ModuleName}}.Repository.Interfaces;
+
+namespace {{ModuleName}}.Repository;
+public class RepositoryWrapper : RepositoryWrapperBase<RepositoryContext>, IRepositoryWrapper
+{
+    public RepositoryWrapper(RepositoryContext context) : base(context)
+    {
+
+    }
+
+    I{{ModuleName}}Repository {{ModuleNameLowerCase}} { get; set; }
+
+    public I{{ModuleName}}Repository {{ModuleName}}
+    {
+        get
+        {
+            if ({{ModuleNameLowerCase}} == null)
+            {
+                {{ModuleNameLowerCase}} = new {{ModuleName}}Repository(_dbContext);
+            }
+
+            return {{ModuleNameLowerCase}};
+        }
+    }
+}

@@ -1,0 +1,59 @@
+[
+  //Service
+  {
+    "Name": "List{{ModuleName}}Request.cs",
+    "Template": "ListModelRequest.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\DTO\\{{ModuleName}}\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}CreateRequest.cs",
+    "Template": "ModelCreateRequest.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\DTO\\{{ModuleName}}\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}Reponse.cs",
+    "Template": "ModelReponse.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\DTO\\{{ModuleName}}\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}UpdateRequest.cs",
+    "Template": "ModelUpdateRequest.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\DTO\\{{ModuleName}}\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "I{{ModuleName}}Service.cs",
+    "Template": "IModelService.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\Interfaces\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}Profile.cs",
+    "Template": "ModelProfile.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\Profiles\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}Validator.cs",
+    "Template": "ModelValidator.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\Validation\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}Service.cs",
+    "Template": "ModelService.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\",
+    "Resource": "Service"
+  }
+]

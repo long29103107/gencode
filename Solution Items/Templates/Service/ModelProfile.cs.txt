@@ -1,0 +1,24 @@
+﻿using AutoMapper;
+using {{ModuleName}}.Service.DTO;
+using Generate = {{ModuleName}}.Model.Generate;
+
+namespace {{ModuleName}}.Service.Profiles;
+public class {{ModuleName}}Profile : Profile
+{
+    public {{ModuleName}}Profile()
+    {
+        ModelToResponse();
+        RequestToModel();
+    }
+
+    private void RequestToModel()
+    {
+        CreateMap<{{ModuleName}}CreateRequest, Generate.{{ModuleName}}>();
+        CreateMap<{{ModuleName}}UpdateRequest, Generate.{{ModuleName}}>();
+    }
+
+    private void ModelToResponse()
+    {
+        CreateMap<Generate.{{ModuleName}}, {{ModuleName}}Reponse>();
+    }
+}

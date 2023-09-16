@@ -1,0 +1,10 @@
+[
+  //Model
+  {
+    "Name": "{{ModuleName}}.cs",
+    "Template": "Model.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Model\\Generate\\",
+    "Resource": "Model"
+  }
+]

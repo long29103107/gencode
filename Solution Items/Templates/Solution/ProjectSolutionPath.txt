@@ -1,0 +1,7 @@
+new Line() { Content ="Project(\"{2150E333-8FDC-42A3-9474-1A3956D46DE8}\") = \"Product\", \"Product\", \"{" +  guidd + "}\"" },
+                new Line() { Content ="EndProject" },
+                new Line() { Content ="Project(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Product.Api\", \"src\\Product\\Product.API\\Product.Api.csproj\", \"{" + guidd1 + "}\"" },
+                new Line() { Content ="Project(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Product.Model\", \"src\\Product\\Product.Model\\Product.Model.csproj\", \"{" + guidd2 + "}\"" },
+                new Line() { Content ="Project(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Product.Repository\", \"src\\Product\\Product.Repository\\Product.Repository.csproj\", \"{" + guidd3 + "}\"" },
+                new Line() { Content ="Project(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Product.Service\", \"src\\Product\\Product.Service\\Product.Service.csproj\", \"{" + guidd4 + "}\"" },
+                new Line() { Content ="EndProject" },

@@ -1,0 +1,4 @@
+﻿namespace {{ModuleName}}.Service.DTO;
+public sealed class List{{ModuleName}}Request
+{
+}

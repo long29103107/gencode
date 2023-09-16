@@ -1,0 +1,212 @@
+[
+  //Api
+  {
+    "Name": "{{ModuleName}}.API",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.API\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "Controllers",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.API\\Controllers\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "Properties",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.API\\Properties\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "launchSettings.json",
+    "Template": "launchSettings.json.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.API\\Properties\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "appsettings.Development.json",
+    "Template": "appsettings.Development.json.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.API\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "appsettings.json",
+    "Template": "appsettings.json.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.API\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "{{ModuleName}}.Api.csproj",
+    "Template": "ModuleProject.csproj.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.API\\",
+    "Resource": "API"
+  },
+  {
+    "Name": "Program.cs",
+    "Template": "Program.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.API\\",
+    "Resource": "API"
+  },
+  //Model
+  {
+    "Name": "Generate",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Model\\Generate\\",
+    "Resource": "Model"
+  },
+  {
+    "Name": "{{ModuleName}}.Model.csproj",
+    "Template": "ModelProject.csproj.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Model\\",
+    "Resource": "Model"
+  },
+  //Repository
+  {
+    "Name": "BaseWrapper",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Repository\\BaseWrapper\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "Interfaces",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Repository\\Interfaces\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "Interfaces",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Repository\\BaseWrapper\\Interfaces\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "{{ModuleName}}.Repository.csproj",
+    "Template": "ModelProject.csproj.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "RepositoryBase.cs",
+    "Template": "RepositoryBase.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "RepositoryContext.cs",
+    "Template": "RepositoryContext.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "RepositoryWrapper.cs",
+    "Template": "RepositoryWrapper.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "IRepositoryBase.cs",
+    "Template": "IRepositoryBase.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\Interfaces\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "IRepositoryWrapper.cs",
+    "Template": "IRepositoryWrapper.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\Interfaces\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "RepositoryWrapperBase.cs",
+    "Template": "RepositoryWrapperBase.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\BaseWrapper\\",
+    "Resource": "Repository"
+  },
+  {
+    "Name": "IRepositoryWrapperBase.cs",
+    "Template": "IRepositoryWrapperBase.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Repository\\BaseWrapper\\Interfaces\\",
+    "Resource": "Repository"
+  },
+  //Service
+  {
+    "Name": "DTO",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Service\\DTO",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Service\\DTO\\{{ModuleName}}",
+    "Resource": "Service"
+  },
+  {
+    "Name": "Interfaces",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Service\\Interfaces\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "Profiles",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Service\\Profiles\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "Validation",
+    "Type": "folder",
+    "Path": "\\{{ModuleName}}.Service\\Validation\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "IBaseService.cs",
+    "Template": "IBaseService.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\Interfaces\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "AutoMapperConfig.cs",
+    "Template": "AutoMapperConfig.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\Profiles\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "BaseService.cs",
+    "Template": "BaseService.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\",
+    "Resource": "Service"
+  },
+  {
+    "Name": "{{ModuleName}}.Service.csproj",
+    "Template": "Model.Service.csproj.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.Service\\",
+    "Resource": "Service"
+  },
+  //Version control
+  {
+    "Name": "Directory.Packages.props",
+    "Template": "Directory.Packages.props.txt",
+    "Type": "file",
+    "Path": "\\",
+    "Resource": ""
+  }
+]

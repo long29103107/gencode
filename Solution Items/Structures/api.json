@@ -1,0 +1,10 @@
+[
+  //Api
+  {
+    "Name": "{{ModuleName}}Controller.cs",
+    "Template": "ModuleController.cs.txt",
+    "Type": "file",
+    "Path": "\\{{ModuleName}}.API\\Controllers\\",
+    "Resource": "API"
+  }
+]

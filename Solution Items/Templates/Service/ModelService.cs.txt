@@ -1,0 +1,97 @@
+﻿using AutoMapper;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+using {{ModuleName}}.Repository.Interfaces;
+using {{ModuleName}}.Service.DTO;
+using {{ModuleName}}.Service.Interfaces;
+using Generate = {{ModuleName}}.Model.Generate;
+
+namespace {{ModuleName}}.Service;
+public class {{ModuleName}}Service : BaseService, I{{ModuleName}}Service
+{
+    private readonly IMapper _mapper; 
+    private readonly IValidatorFactory _validatorFactory;
+    public {{ModuleName}}Service(IRepositoryWrapper wrapper, IMapper mapper, IValidatorFactory validatorFactory) : base(wrapper)
+    {
+        _mapper = mapper;
+        _validatorFactory = validatorFactory;
+    }
+
+    public async Task<{{ModuleName}}Reponse> GetDetailAsync(int id)
+    {
+        var model = await Get{{ModuleName}}Async(id);
+
+        var result = _mapper.Map<{{ModuleName}}Reponse>(model);
+
+        return result;
+    }
+
+    public async Task<List<{{ModuleName}}Reponse>> GetListAsync(List{{ModuleName}}Request request)
+    {
+        var listModel = await _wrapper.{{ModuleName}}.FindAll().ToListAsync();
+
+        var result = _mapper.Map<List<{{ModuleName}}Reponse>>(listModel);
+
+        return result;
+    }
+
+    public async Task<{{ModuleName}}Reponse> CreateAsync({{ModuleName}}CreateRequest request)
+    {
+        var model = new Generate.{{ModuleName}}();
+
+        _mapper.Map<{{ModuleName}}CreateRequest, Generate.{{ModuleName}}>(request, model);
+
+        await Validate{{ModuleName}}Async(model);
+
+        _wrapper.{{ModuleName}}.Add(model);
+        await _wrapper.SaveAsync();
+        var result = _mapper.Map<{{ModuleName}}Reponse>(model);
+
+        return result;
+    }
+
+    public async Task<{{ModuleName}}Reponse> UpdateAsync(int id, {{ModuleName}}UpdateRequest request)
+    {
+        var model = await Get{{ModuleName}}Async(id);
+
+        _mapper.Map<{{ModuleName}}UpdateRequest, Generate.{{ModuleName}}>(request, model);
+
+        await Validate{{ModuleName}}Async(model);
+        _wrapper.{{ModuleName}}.Update(model);
+        await _wrapper.SaveAsync();
+
+        var result = _mapper.Map<{{ModuleName}}Reponse>(model);
+
+        return result;
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var model = await Get{{ModuleName}}Async(id);
+
+        _wrapper.{{ModuleName}}.Delete(model);
+        await _wrapper.SaveAsync();
+    }
+
+    private async Task Validate{{ModuleName}}Async(Generate.{{ModuleName}} model)
+    {
+        var validator = _validatorFactory.GetValidator<Generate.{{ModuleName}}>();
+        var result = await validator.ValidateAsync(model);
+
+        if (!result.IsValid)
+            throw new Exception(string.Join(", ", result.Errors.Select(x => x.ErrorMessage)));
+    }
+
+    private async Task<Generate.{{ModuleName}}> Get{{ModuleName}}Async(int id)
+    {
+        var model = await _wrapper.{{ModuleName}}.FindByCondition(x => x.Id == id)
+                                    .FirstOrDefaultAsync();
+
+        if (model == null)
+        {
+            throw new Exception("{{ModuleName}} is not found !");
+        }
+
+        return model;
+    }
+}

@@ -1,0 +1,13 @@
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|Any CPU = Debug|Any CPU
+    Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+    {{{UniqueProject}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {{{UniqueProject}}}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {{{UniqueProject}}}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {{{UniqueProject}}}.Release|Any CPU.Build.0 = Release|Any CPU
+EndGlobalSection
+GlobalSection(NestedProjects) = preSolution
+    {UniqueProject} = {C41AAB20-8096-4B49-ABB9-704FDFCCFA49}
+EndGlobalSection

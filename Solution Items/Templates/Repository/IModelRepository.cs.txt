@@ -1,0 +1,6 @@
+﻿using Generate = {{ModuleName}}.Model.Generate;
+
+namespace {{ModuleName}}.Repository.Interfaces;
+public interface I{{ModuleName}}Repository : IRepositoryBase<Generate.{{ModuleName}}>
+{
+}

@@ -1,0 +1,31 @@
+﻿using Microsoft.EntityFrameworkCore;
+using {{ModuleName}}.Repository.Interfaces;
+using Generate = {{ModuleName}}.Model.Generate;
+
+namespace {{ModuleName}}.Repository;
+public class {{ModuleName}}Repository : RepositoryBase<Generate.{{ModuleName}}, DbContext>, I{{ModuleName}}Repository
+{
+    public {{ModuleName}}Repository(DbContext context) : base(context)
+    {
+    }
+
+    public override void BeforeAdd(Generate.{{ModuleName}} model)
+    {
+        model.CreatedBy = "unknown";
+        model.CreatedAt = DateTime.UtcNow;
+        model.UpdatedBy = "unknown";
+        model.UpdatedAt = DateTime.UtcNow;
+    }
+
+    public override void BeforeUpdate(Generate.{{ModuleName}} model)
+    {
+        model.UpdatedBy = "unknown";
+        model.UpdatedAt = DateTime.UtcNow;
+    }
+
+    public override void BeforeDelete(Generate.{{ModuleName}} model)
+    {
+        model.DeletedBy = "unknown";
+        model.DeletedAt = DateTime.UtcNow;
+    }
+}

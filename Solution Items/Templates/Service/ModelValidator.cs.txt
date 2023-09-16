@@ -1,0 +1,20 @@
+﻿using FluentValidation;
+using {{ModuleName}}.Repository.Interfaces;
+using Generate = {{ModuleName}}.Model.Generate;
+
+namespace {{ModuleName}}.Service.Validation;
+public class {{ModuleName}}Validator : AbstractValidator<Generate.{{ModuleName}}>
+{
+    private readonly IRepositoryWrapper _wrapper;
+
+    public {{ModuleName}}Validator(IRepositoryWrapper wrapper)
+    {
+        _wrapper = wrapper;
+        RuleFor(x => x).CustomAsync(HandleAsync);
+    }
+
+    private async Task HandleAsync(Generate.{{ModuleName}} model, ValidationContext<Generate.{{ModuleName}}> context, CancellationToken token)
+    {
+        return;
+    }
+}
